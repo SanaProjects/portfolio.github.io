@@ -57,7 +57,7 @@ hr{
     --secondary-color: #ff9100;
     --default-text-color: #333;
     --theme-color-hover: #003184;
-    --secondary-color-hover: #ffac3f;
+    --secondary-color-hover: #ff5e00;
     
 }
 
@@ -110,6 +110,18 @@ body{
 }
 /* ===========MARGIN END=============== */
 
+/* ===========Padding Setting=============== */
+
+.default-list.ptb-0 li{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.ptb-5, .default-list.ptb-5 li {
+    padding: 5px 0;
+}
+
+/* ===========Padding END=============== */
+
 .upper-text{
     text-transform: uppercase;
 }
@@ -139,7 +151,11 @@ body{
     border: 1px solid #e3e3e3;
     border-radius: 6px;
     box-shadow: 0 0 5px 0 #d6d6d6;
-    
+    transition: 0.5s;
+}
+.gallery-item:hover{
+    /* box-shadow: 0 0 10px 0 var(--theme-color); */
+    border: 1px solid var(--theme-color);
 }
 .card{
     padding: 20px 10px;
@@ -153,7 +169,7 @@ body{
 
 .default-list li{
     list-style: disc;
-    padding: 10px;
+    padding: 5px;
     margin-left: 20px;
 }
 
@@ -166,13 +182,22 @@ body{
     padding: 10px 30px;
     border-radius: 4px;
     text-align: center;
+    transition: 0.5s;
 }
 .pm-btn a{
     background-color: var(--theme-color);
     color: #ffffff;
 }
+.pm-btn a:hover{
+    background-color: var(--theme-color-hover);
+    
+}
 .sd-btn a{
     background-color: var(--secondary-color);
+    color: #ffffff;
+}
+.sd-btn a:hover{
+    background-color: var(--secondary-color-hover);
     color: #ffffff;
 }
 .red-btn a{
@@ -201,6 +226,7 @@ body{
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    transition: 0.5s;
 }
 
 .img-wrap-circle img{    
@@ -250,7 +276,12 @@ body{
 }
 
 .contact-details a{
-    color: #ffffff;    
+    color: #ffffff; 
+    transition: 0.5s;   
+}
+.contact-details a:hover{
+    color: var(--secondary-color); 
+    
 }
 .left-side-bar hr{
     border-color: #005b65;
@@ -265,6 +296,10 @@ body{
     padding: 5px 0;
     display: block;
     border-bottom: 1px dotted #005b65;
+    transition: 0.5s;
+}
+.menu-list li a:hover{
+    color: var(--secondary-color);
 }
 
 .menu-list li.default-btn a{
@@ -277,12 +312,18 @@ body{
     padding: 0 40px;
 }
 .img-icon{        
-    overflow: hidden;
+    /* overflow: hidden; */
     text-align: center;
+    transition: all 0.5s;
 }
+
 .img-icon img{
     width: 50px;
     height: 50px;
+    transition: all 0.5s ease-in-out;
+}
+.img-icon a:hover .icon{
+    transform: scale(1.2);
 }
 /* ===================================== */
 
@@ -304,6 +345,19 @@ body{
 
 .gallery-item{
     background-color: #ffffff;
+    position: relative;
+}
+.gallery-item:hover .img-wrap-circle{
+    box-shadow: 0 0 8px 1px var(--secondary-color);
+}
+.gallery-link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
 
 .gallery-item p{
@@ -317,4 +371,210 @@ body{
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 6px;
+}
+
+@media (max-width:1180px){
+    h1{
+        font-size: 45px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    h3{
+        font-size: 20px;
+    }
+
+    .right-body-wrap h1 span{
+        font-size: 36px;
+    }
+    .contact-details {
+        padding: 0 5px;
+        margin-top: 20px;
+        text-align: center;
+        color: #ffffff;
+    }
+    .contact-details p {
+        font-size: 14px;
+    }
+    
+    .nav-list, .link-list {
+        padding: 0 10px;
+    }
+    .profile-img-wrap, .profile-img-wrap img{
+        width: 120px;
+        height: 120px;
+    }
+    /* .gallery-item{
+        width: 49%;
+    } */
+}
+
+
+@media (max-width: 1024px){
+
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 18px;
+    }
+
+    .right-body-wrap h1 span{
+        font-size: 30px;
+    }
+    .nav-list{
+        line-height: 0;
+    }
+    
+    /* .para-row{
+        flex-direction: column;
+    } */
+    /* .para-col{
+        width: 100%;
+    }
+    .gallery-item{
+        width: 100%;
+    } */
+    .body-wrap{
+        flex-direction: column;
+    }
+    .right-body-wrap, .left-side-bar{
+        width: 100%;
+
+    }
+    .left-side-bar{
+        height: inherit;
+        position: inherit;
+        background-color: #fafafa;
+        padding: 20px 0 0 0;
+        
+    }
+    .profile-img-wrap{
+        width: 100%;
+    }
+    .left-side-bar hr{
+        display: none;
+    }
+    .right-body-wrap {
+        margin-left: 0;
+        padding: 0 30px;        
+    }
+    
+    .nav-list{
+        background-color: var(--theme-color);
+        margin-top: 20px;
+        
+    }
+    .link-list{
+        justify-content: flex-end;
+    }
+    .menu-list{
+        text-align: center;
+    }
+    .menu-list li{
+        display: inline-block;
+        padding: 15px 55px;
+    }
+    .menu-list li a{
+        border-bottom: none;        
+        font-weight: 800;
+    }
+    .contact-details{
+        /* display: none; */
+        color: #333333;
+        
+    }
+    .contact-details a{
+        color: #333333;
+    }
+    .menu-list .default-btn{
+        position: fixed;
+        bottom: 0;
+        width: 50%;
+        z-index: 1;
+        left: 0;
+        margin: 10px 30px;
+        padding: 0;
+        text-align: left;
+    }
+    .menu-list .default-btn a{
+        display: inline-block;
+        background-color: var(--theme-color);
+        padding: 20px;
+        padding: 4px 15px;
+        line-height: 30px;
+        font-size: 14px;
+        
+    }
+    
+    .link-list{
+        position: fixed;
+        bottom: 0;
+        width: 40%;
+        z-index: 1;
+        right: 0;
+    }
+    .img-icon{
+        padding: 0 10px;
+    }
+    .img-icon img{
+        width: 40px;
+        height: 40px;
+
+    }
+    .profile-img-wrap img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-img-wrap, .profile-img-wrap img{
+        width: 120px;
+        height: 120px;
+    }
+    .page-para{
+        padding-top: 20px;
+    }
+
+}
+
+@media (max-width: 800px){   
+    
+   
+    .para-col{
+        width: 49%;
+    }
+    .gallery-item{
+        width: 49%;
+    }
+    
+
+}
+
+@media (max-width: 566px){
+    .menu-list li {        
+        padding: 15px 20px;
+    }
+    .para-row{
+        flex-direction: column;
+    }
+    .para-col{
+        width: 100%;
+    }
+    .gallery-item{
+        width: 100%;
+    }
+    .default-list.mt-10{
+        margin-top: 0;
+    }
+    .img-icon {
+        padding: 0 3px;
+    }
+    .menu-list .default-btn {        
+        margin: 10px 15px;
+    }
+        
+    
 }
