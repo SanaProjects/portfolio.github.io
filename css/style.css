@@ -54,10 +54,10 @@ hr{
 
 :root{
     --theme-color: #00163d;   
-    --secondary-color: #ff9100;
+    --secondary-color: #da0e52;
     --default-text-color: #333;
     --theme-color-hover: #003184;
-    --secondary-color-hover: #ff5e00;
+    --secondary-color-hover: #a50a3e;
     
 }
 
@@ -300,6 +300,10 @@ body{
 }
 .menu-list li a:hover{
     color: var(--secondary-color);
+}
+
+.menu-list li.default-btn a:hover{
+    color: #ffffff;
 }
 
 .menu-list li.default-btn a{
