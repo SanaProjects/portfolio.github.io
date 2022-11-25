@@ -6,7 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 h1, h2, h3, h4, h5, p, ul, li, a{
     margin: 0;
     padding: 0;
@@ -132,7 +134,11 @@ body{
     width: 50%;
 }
 .page-para{
-    padding-top: 50px;
+    padding-top: 30px;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 }
 
 .gallery-wrap{
@@ -429,9 +435,7 @@ body{
     .right-body-wrap h1 span{
         font-size: 30px;
     }
-    .nav-list{
-        line-height: 0;
-    }
+    
     
     /* .para-row{
         flex-direction: column;
@@ -470,6 +474,7 @@ body{
     .nav-list{
         background-color: var(--theme-color);
         margin-top: 20px;
+        line-height: 0;
         
     }
     .link-list{
@@ -540,6 +545,7 @@ body{
     }
     .page-para{
         padding-top: 20px;
+        min-height: auto;
     }
 
 }
