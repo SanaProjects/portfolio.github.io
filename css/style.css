@@ -32,7 +32,7 @@ h3{
 
 p{
     line-height: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 a{
@@ -131,7 +131,7 @@ body{
     display: flex;
 }
 .para-col{
-    width: 50%;
+    width: 30%;
 }
 .page-para{
     padding-top: 30px;
@@ -141,7 +141,7 @@ body{
     justify-content: center;
 }
 
-.gallery-wrap{
+.gallery-wrap, .graphics-wrap{
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -158,6 +158,19 @@ body{
     border-radius: 6px;
     box-shadow: 0 0 5px 0 #d6d6d6;
     transition: 0.5s;
+}
+.graphics-item{
+    width: 154px;
+    height: 154px;
+    margin-bottom: 10px;
+    margin-right: 1%;
+    align-items: stretch;
+    border: 1px solid #e3e3e3;
+    border-radius: 6px;
+    box-shadow: 0 0 5px 0 #d6d6d6;
+    transition: 0.5s;
+    overflow: hidden;
+    line-height: 0;
 }
 .gallery-item:hover{
     /* box-shadow: 0 0 10px 0 var(--theme-color); */
